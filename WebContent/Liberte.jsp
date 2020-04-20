@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Liberté</title>
 </head>
-<body BGCOLOR="teal">
-<CENTER>
-<jsp:useBean id="nomBean"  class="beans.Democratie" scope="session"></jsp:useBean>
-<%  nomBean.voter();%>
-<h1>Bonjour la liberté!</h1>
-<p>Passons au vote ...</p>
-<p>Le nombre de voix aprés le vote est:</p>
-<%=nomBean.getVoix() %>
-</CENTER>
+<body BGCOLOR="#COCOCO">
+<center>
+<H1>Bonjour la liberté!</H1>
+<jsp:useBean id="LibBean" class="beans.Democratie" scope="session"/>
+<p>Passons au vote....</p>
+<%LibBean.voter();%>
+<p>Le nombre de voix après le vote est: </p>
+<jsp:getProperty name="LibBean" property="voix" />
+</center>
 </body>
 </html>

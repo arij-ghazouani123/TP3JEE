@@ -1,14 +1,23 @@
 package beans;
 
 public class Authentification {
+
 	private String login;
 	private String password;
-	private String test;
 	
 	public Authentification(){
-		setLogin("arij");
-		setPassword("ghazouani");
+		setLogin("");
+		setPassword("");
 	}
+	
+	public boolean Valide(){
+		boolean validation=false;
+		if ((getLogin().equals("USER1"))&&(getPassword().equals("PASS1"))){
+			validation=true;
+		}
+		return validation;
+	}
+	
 	public String getLogin() {
 		return login;
 	}
@@ -21,10 +30,4 @@ public class Authentification {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Boolean Valide(String USER1 , String PASS1) {
-	if (USER1.equals(login) && (PASS1.equals(password))) ; 
-	  return true;	
-	
-	}
-	
 }
